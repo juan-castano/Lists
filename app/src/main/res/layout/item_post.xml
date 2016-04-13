@@ -5,29 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="4dp"
+        android:padding="12dp"
         android:gravity="center"
-        android:text="New Text"
+        android:src="@drawable/ic_view_comfy_black_24dp"
         android:id="@+id/postId" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="24dp"
             android:text="New Text"
             android:id="@+id/postTitle" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="16dp"
             android:text="New Text"
             android:id="@+id/postBody" />
     </LinearLayout>
