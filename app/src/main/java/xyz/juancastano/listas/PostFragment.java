@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,5 +72,12 @@ public class PostFragment extends ListFragment implements LoaderManager.LoaderCa
 
         setListAdapter(new PostAdapter(getActivity(), new LinkedList<Post>()));
 
+    }
+
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Toast.makeText(getActivity(), "Item " + position, Toast.LENGTH_SHORT).show();
     }
 }

@@ -48,20 +48,13 @@ public class PostAdapter extends BaseAdapter {
 
         Post post = (Post) getItem(position);
 
-        TextView mPostId = (TextView) convertView.findViewById(R.id.postId);
         TextView mPostTitle = (TextView) convertView.findViewById(R.id.postTitle);
         TextView mPostBody = (TextView) convertView.findViewById(R.id.postBody);
 
-        mPostId.setText(post.getId()+"");
         mPostTitle.setText(post.getTitle());
         mPostBody.setText(post.getBody());
 
         return convertView;
-    }
-
-    public void setLista(List<Post> listaPost) {
-        this.listaPost.addAll(listaPost);
-        notifyDataSetChanged();
     }
 
 
