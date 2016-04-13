@@ -1,32 +1,20 @@
-package xyz.juancastano.listas;
+package xyz.juancastano.listas.loaders;
 
-import android.app.ProgressDialog;
 import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.content.Loader;
 import android.util.Log;
-import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
+
+import xyz.juancastano.listas.models.Post;
 
 /**
  * Created by jcastano on 07/04/16.
@@ -85,6 +73,8 @@ public class PostLoader extends AsyncTaskLoader<List<Post>> {
 
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonPost = jsonArray.getJSONObject(i);
+
+                    Log.i(TAG, jsonPost.getInt("id") + " - " + jsonPost.getString("title"));
 
                     listaPost.add(new Post(jsonPost.getInt("id"), jsonPost.getString("title"), jsonPost.getString("body")));
 

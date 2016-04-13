@@ -13,7 +13,7 @@
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="xyz.juancastano.listas.PostFragment"
+        android:name="xyz.juancastano.listas.fragments.PostFragment"
         android:id="@+id/fragment"
         android:layout_gravity="left|top"
         tools:layout="@layout/fragment_post" />

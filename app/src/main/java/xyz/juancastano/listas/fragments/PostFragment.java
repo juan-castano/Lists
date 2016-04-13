@@ -1,23 +1,26 @@
-package xyz.juancastano.listas;
+package xyz.juancastano.listas.fragments;
 
 
 import android.app.ListFragment;
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import xyz.juancastano.listas.activities.DescripcionPostActivity;
+import xyz.juancastano.listas.loaders.PostLoader;
+import xyz.juancastano.listas.R;
+import xyz.juancastano.listas.adapters.PostAdapter;
+import xyz.juancastano.listas.models.Post;
 
 
 /**
@@ -78,6 +81,17 @@ public class PostFragment extends ListFragment implements LoaderManager.LoaderCa
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
+
+        Post post = (Post) getListAdapter().getItem(position);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("POST", post);
+
+        Intent intent = new Intent(getActivity(), DescripcionPostActivity.class);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+
         Toast.makeText(getActivity(), "Item " + position, Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,9 +1,11 @@
-package xyz.juancastano.listas;
+package xyz.juancastano.listas.models;
+
+import java.io.Serializable;
 
 /**
  * Created by jcastano on 06/04/16.
  */
-public class Post {
+public class Post implements Serializable{
 
     private int id;
     private String title;
