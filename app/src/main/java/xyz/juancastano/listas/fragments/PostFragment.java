@@ -91,7 +91,6 @@ public class PostFragment extends ListFragment implements LoaderManager.LoaderCa
         intent.putExtras(bundle);
 
         startActivity(intent);
-
-        Toast.makeText(getActivity(), "Item " + position, Toast.LENGTH_SHORT).show();
+        
     }
 }
