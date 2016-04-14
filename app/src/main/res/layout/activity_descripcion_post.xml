@@ -1,57 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activities.DescripcionPostActivity">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="10dp"
-        android:src="@drawable/ic_view_comfy_black_24dp"/>
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".activities.DescripcionPostActivity">
 
-        <TextView
-            android:id="@+id/descPostId"
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="28dp"
-            android:padding="5dp"
-            android:text="Id"/>
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:src="@drawable/ic_view_comfy_black_24dp"/>
 
-        <TextView
-            android:id="@+id/descPostTitle"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="28dp"
-            android:padding="5dp"
-            android:text="Title"/>
+            android:padding="10dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/descPostBody"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:textSize="16dp"
-            android:padding="5dp"
-            android:text="Body"/>
+            <TextView
+                android:id="@+id/descPostId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="28dp"
+                android:padding="5dp"
+                android:text="Id"/>
+
+            <TextView
+                android:id="@+id/descPostTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="28dp"
+                android:padding="5dp"
+                android:text="Title"/>
+
+            <TextView
+                android:id="@+id/descPostBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:text="Body"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
-
-
-
-</LinearLayout>
+</ScrollView>
